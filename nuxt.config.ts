@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     vite: {
         plugins: [tailwindcss()],
     },
-    modules: ["@nuxtjs/google-fonts"],
+    modules: ["@nuxtjs/google-fonts", "@nuxt/image"],
 
     googleFonts: {
         families: {
