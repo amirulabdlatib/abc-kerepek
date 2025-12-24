@@ -22,7 +22,7 @@
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-wrap gap-3 sm:gap-4 pt-2">
-                    <button class="bg-primary text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:bg-primary-dark transition-colors duration-200 text-sm sm:text-base font-medium">Order Sekarang</button>
+                    <NuxtLink to="/produk" class="bg-primary text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:bg-primary-dark transition-colors duration-200 text-sm sm:text-base font-medium">Order Sekarang</NuxtLink>
                     <button class="bg-white text-primary px-6 sm:px-8 py-2.5 sm:py-3 rounded-full border border-primary hover:bg-secondary-accent transition-colors duration-200 text-sm sm:text-base font-medium flex items-center gap-2">
                         <Icon name="mdi:whatsapp" class="text-lg" />
                         WhatsApp Kami
