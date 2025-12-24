@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+@theme {
+    --color-primary: #6b2c2c;
+    --color-primary-dark: #5a2424;
+    --color-primary-light: #8b3a3a;
+    --color-secondary: #f5f1e8;
+    --color-secondary-accent: #e8dcc8;
+    --color-border: #d4c5b0;
+}
+
 @layer base {
     h1,
     h2,
@@ -9,7 +18,6 @@
     h6 {
         font-family: "Playfair Display", serif;
     }
-
     body {
         font-family: Inter, sans-serif;
     }
