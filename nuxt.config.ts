@@ -23,4 +23,16 @@ export default defineNuxtConfig({
         preconnect: true,
         preload: true,
     },
+
+    app: {
+        head: {
+            link: [
+                {
+                    rel: "icon",
+                    type: "image/x-icon",
+                    href: "/images/favicon/favicon.ico",
+                },
+            ],
+        },
+    },
 });
