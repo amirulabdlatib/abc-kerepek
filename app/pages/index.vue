@@ -3,6 +3,7 @@
         <Hero />
         <WhyChooseUs />
         <HowToOrder />
+        <FeaturedProducts />
     </div>
 </template>
 
