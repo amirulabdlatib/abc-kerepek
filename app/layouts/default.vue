@@ -4,5 +4,6 @@
         <main>
             <slot />
         </main>
+        <PublicFooter />
     </div>
 </template>
