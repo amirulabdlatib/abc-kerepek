@@ -1,7 +1,7 @@
 <template>
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <!-- Filter Tabs -->
-        <div class="flex flex-wrap gap-3 mb-10 justify-center">
+        <div class="flex flex-wrap gap-3 mb-8 justify-center">
             <button
                 v-for="category in categories"
                 :key="category.id"
@@ -19,7 +19,7 @@
                 <div class="relative overflow-hidden bg-gray-900 aspect-square">
                     <!-- Badge -->
                     <div v-if="product.badge" class="absolute top-3 left-3 z-10">
-                        <span :class="['text-xs font-bold px-3 py-1 rounded-full', product.badge === 'LARIS' ? 'bg-orange-500 text-white' : 'bg-yellow-500 text-gray-900']">
+                        <span :class="['text-xs font-bold px-3 py-1 rounded-full uppercase', product.badge === 'LARIS' ? 'bg-orange-500 text-white' : 'bg-yellow-500 text-gray-900']">
                             {{ product.badge }}
                         </span>
                     </div>
@@ -29,14 +29,14 @@
 
                 <!-- Product Info -->
                 <div class="p-5">
-                    <h3 class="font-bold text-lg text-gray-900 mb-2">{{ product.name }}</h3>
-                    <p class="text-sm text-gray-600 mb-4 line-clamp-2">{{ product.description }}</p>
+                    <h3 class="font-bold text-base text-gray-900 mb-1.5">{{ product.name }}</h3>
+                    <p class="text-xs text-gray-600 mb-4 line-clamp-2">{{ product.description }}</p>
 
                     <!-- Price & Cart -->
                     <div class="flex items-center justify-between">
-                        <div class="text-primary font-bold text-xl">RM {{ product.price }}</div>
-                        <button class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary-dark transition-colors duration-200 group-hover:scale-110">
-                            <Icon name="mdi:cart-plus" class="text-xl" />
+                        <div class="text-primary font-bold text-lg">RM {{ product.price }}</div>
+                        <button class="w-9 h-9 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary-dark transition-colors duration-200 group-hover:scale-110">
+                            <Icon name="mdi:cart-plus" class="text-lg" />
                         </button>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
         </div>
 
         <!-- Pagination -->
-        <div v-if="filteredProducts.length > 0" class="flex justify-center items-center gap-2 mt-12">
+        <div v-if="filteredProducts.length > 0" class="flex justify-center items-center gap-2 mt-10">
             <button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-secondary-accent transition-colors duration-200">
                 <Icon name="mdi:chevron-left" class="text-xl text-gray-600" />
             </button>

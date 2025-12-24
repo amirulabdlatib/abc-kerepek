@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-secondary min-h-screen">
+    <div class="bg-secondary">
         <ProdukHero />
         <ProdukList />
     </div>
