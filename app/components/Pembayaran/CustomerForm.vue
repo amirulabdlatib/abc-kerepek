@@ -1,15 +1,12 @@
 <template>
     <div class="bg-white rounded-2xl p-6 shadow-sm">
-        <!-- Section Header -->
         <div class="flex items-center gap-2 mb-6">
             <Icon name="mdi:account" class="text-xl text-primary" />
             <h2 class="text-lg font-bold text-gray-900">Maklumat Pelanggan & Penghantaran</h2>
         </div>
 
         <form class="space-y-4">
-            <!-- Name & Phone Row -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- Name -->
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nama</label>
                     <input
@@ -21,7 +18,6 @@
                     />
                 </div>
 
-                <!-- Phone -->
                 <div>
                     <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Nombor Telefon</label>
                     <input
@@ -34,7 +30,6 @@
                 </div>
             </div>
 
-            <!-- Email -->
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Alamat E-mel</label>
                 <input
@@ -46,7 +41,6 @@
                 />
             </div>
 
-            <!-- Address Line 1 -->
             <div>
                 <label for="address1" class="block text-sm font-medium text-gray-700 mb-2">Alamat Baris 1</label>
                 <input
@@ -58,7 +52,6 @@
                 />
             </div>
 
-            <!-- Address Line 2 (Optional) -->
             <div>
                 <label for="address2" class="block text-sm font-medium text-gray-700 mb-2">Alamat Baris 2 (Pilihan)</label>
                 <input
@@ -70,9 +63,7 @@
                 />
             </div>
 
-            <!-- Postcode & State Row -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- Postcode -->
                 <div>
                     <label for="postcode" class="block text-sm font-medium text-gray-700 mb-2">Poskod</label>
                     <input
@@ -84,7 +75,6 @@
                     />
                 </div>
 
-                <!-- State -->
                 <div>
                     <label for="state" class="block text-sm font-medium text-gray-700 mb-2">Negeri</label>
                     <div class="relative">

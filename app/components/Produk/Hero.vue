@@ -2,13 +2,10 @@
     <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="bg-primary rounded-2xl py-10 px-6 sm:px-12">
             <div class="text-center text-white space-y-4">
-                <!-- Title -->
                 <h1 class="text-3xl sm:text-xl lg:text-2xl font-bold">Produk Kami</h1>
 
-                <!-- Subtitle -->
                 <p class="text-sm sm:text-base text-white/90 max-w-2xl mx-auto">Rasa Asli Tradisi Kami — Rangup, Pedas, Memikat!</p>
 
-                <!-- Search Bar -->
                 <div class="max-w-2xl mx-auto pt-2">
                     <div class="relative">
                         <Icon name="mdi:magnify" class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl" />

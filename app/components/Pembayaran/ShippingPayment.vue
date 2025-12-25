@@ -1,6 +1,5 @@
 <template>
     <div class="bg-white rounded-2xl p-6 shadow-sm">
-        <!-- Collapsible Header -->
         <button class="w-full flex items-center justify-between mb-6 group" @click="isExpanded = !isExpanded">
             <div class="flex items-center gap-2">
                 <Icon :name="isExpanded ? 'mdi:chevron-down' : 'mdi:chevron-right'" class="text-xl text-gray-600 transition-transform" />
@@ -8,7 +7,6 @@
             </div>
         </button>
 
-        <!-- Expandable Content -->
         <Transition
             enter-active-class="transition-all duration-300 ease-out"
             enter-from-class="opacity-0 max-h-0"
@@ -18,11 +16,9 @@
             leave-to-class="opacity-0 max-h-0"
         >
             <div v-show="isExpanded" class="space-y-6 overflow-hidden">
-                <!-- Shipping Method -->
                 <div>
                     <h3 class="text-sm font-bold text-gray-900 mb-4">Kaedah Penghantaran</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                        <!-- Pos Option -->
                         <label
                             :class="[
                                 'relative flex flex-col items-center p-4 rounded-xl border-2 cursor-pointer transition-all duration-200',
@@ -43,7 +39,6 @@
                             </div>
                         </label>
 
-                        <!-- Self Pickup Option -->
                         <label
                             :class="[
                                 'relative flex flex-col items-center p-4 rounded-xl border-2 cursor-pointer transition-all duration-200',
@@ -63,7 +58,6 @@
                             </div>
                         </label>
 
-                        <!-- Cash on Delivery Option -->
                         <label
                             :class="[
                                 'relative flex flex-col items-center p-4 rounded-xl border-2 cursor-pointer transition-all duration-200',
@@ -87,11 +81,9 @@
                     </div>
                 </div>
 
-                <!-- Payment Method -->
                 <div>
                     <h3 class="text-sm font-bold text-gray-900 mb-4">Kaedah Pembayaran</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <!-- Bank Transfer Option -->
                         <label
                             :class="[
                                 'relative flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-all duration-200',
@@ -112,7 +104,6 @@
                             </div>
                         </label>
 
-                        <!-- E-Wallet Option -->
                         <label
                             :class="[
                                 'relative flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-all duration-200',

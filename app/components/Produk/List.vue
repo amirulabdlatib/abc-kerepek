@@ -12,13 +12,9 @@
             </button>
         </div>
 
-        <!-- Products Grid -->
         <div v-if="filteredProducts.length > 0" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Product Card -->
             <div v-for="product in filteredProducts" :key="product.id" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
-                <!-- Product Image -->
                 <div class="relative overflow-hidden bg-gray-900 aspect-square">
-                    <!-- Badge -->
                     <div v-if="product.badge" class="absolute top-3 left-3 z-10">
                         <span :class="['text-xs font-bold px-3 py-1 rounded-full uppercase', product.badge === 'LARIS' ? 'bg-orange-500 text-white' : 'bg-yellow-500 text-gray-900']">
                             {{ product.badge }}
@@ -28,12 +24,10 @@
                     <NuxtImg :src="product.image" :alt="product.name" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
                 </div>
 
-                <!-- Product Info -->
                 <div class="p-5">
                     <h3 class="font-bold text-base text-gray-900 mb-1.5">{{ product.name }}</h3>
                     <p class="text-xs text-gray-600 mb-4 line-clamp-2">{{ product.description }}</p>
 
-                    <!-- Price & Cart -->
                     <div class="flex items-center justify-between">
                         <div class="text-primary font-bold text-lg">RM {{ product.price }}</div>
                         <button class="w-9 h-9 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary-dark transition-colors duration-200 group-hover:scale-110">
@@ -44,19 +38,15 @@
             </div>
         </div>
 
-        <!-- Empty State -->
         <div v-else class="text-center py-16">
             <div class="max-w-md mx-auto">
-                <!-- Empty Icon -->
                 <div class="w-24 h-24 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
                     <Icon name="mdi:package-variant" class="text-5xl text-primary/50" />
                 </div>
 
-                <!-- Empty Text -->
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Tiada Produk Dijumpai</h3>
                 <p class="text-sm text-gray-600 mb-6">Maaf, tiada produk dalam kategori ini buat masa ini. Cuba pilih kategori lain.</p>
 
-                <!-- Reset Button -->
                 <button class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary-dark transition-colors duration-200 text-sm font-medium inline-flex items-center gap-2" @click="selectedCategory = 'all'">
                     <Icon name="mdi:refresh" class="text-lg" />
                     <span>Lihat Semua Produk</span>
@@ -64,7 +54,6 @@
             </div>
         </div>
 
-        <!-- Pagination -->
         <div v-if="filteredProducts.length > 0" class="flex justify-center items-center gap-2 mt-10">
             <button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-secondary-accent transition-colors duration-200">
                 <Icon name="mdi:chevron-left" class="text-xl text-gray-600" />
