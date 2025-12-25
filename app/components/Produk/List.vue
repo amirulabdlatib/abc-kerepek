@@ -5,8 +5,9 @@
             <button
                 v-for="category in categories"
                 :key="category.id"
+                :class="['px-6 py-2 rounded-full text-sm font-medium transition-all duration-200', selectedCategory === category.id ? 'bg-primary text-white' : 'bg-white text-gray-700 border border-primary hover:bg-secondary-accent']"
                 @click="selectedCategory = category.id"
-                :class="['px-6 py-2 rounded-full text-sm font-medium transition-all duration-200', selectedCategory === category.id ? 'bg-primary text-white' : 'bg-white text-gray-700 border border-primary hover:bg-secondary-accent']">
+            >
                 {{ category.name }}
             </button>
         </div>
@@ -56,7 +57,7 @@
                 <p class="text-sm text-gray-600 mb-6">Maaf, tiada produk dalam kategori ini buat masa ini. Cuba pilih kategori lain.</p>
 
                 <!-- Reset Button -->
-                <button @click="selectedCategory = 'all'" class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary-dark transition-colors duration-200 text-sm font-medium inline-flex items-center gap-2">
+                <button class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary-dark transition-colors duration-200 text-sm font-medium inline-flex items-center gap-2" @click="selectedCategory = 'all'">
                     <Icon name="mdi:refresh" class="text-lg" />
                     <span>Lihat Semua Produk</span>
                 </button>
@@ -72,7 +73,8 @@
             <button
                 v-for="page in [1, 2, 3]"
                 :key="page"
-                :class="['w-10 h-10 flex items-center justify-center rounded-full text-sm font-medium transition-colors duration-200', page === 1 ? 'bg-primary text-white' : 'bg-white text-gray-700 hover:bg-secondary-accent']">
+                :class="['w-10 h-10 flex items-center justify-center rounded-full text-sm font-medium transition-colors duration-200', page === 1 ? 'bg-primary text-white' : 'bg-white text-gray-700 hover:bg-secondary-accent']"
+            >
                 {{ page }}
             </button>
 
